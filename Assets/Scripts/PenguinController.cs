@@ -27,4 +27,8 @@ public class PenguinController : MonoBehaviour {
 			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}
 	}
+
+	void OnDestroy() {
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+	}
 }
