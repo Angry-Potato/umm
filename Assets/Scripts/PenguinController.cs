@@ -16,7 +16,7 @@ public class PenguinController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonUp("Jump")) {
+		if (Input.GetButtonUp("Jump") || Input.GetButtonUp("Fire1")) {
 			myRigidBody.AddForce(transform.up*penguinJumpForce);
 		}
 		myAnim.SetFloat("vVelocity", Mathf.Abs(myRigidBody.velocity.y));
