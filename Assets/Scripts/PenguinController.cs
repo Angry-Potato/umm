@@ -18,6 +18,6 @@ public class PenguinController : MonoBehaviour {
 		if (Input.GetButtonUp("Jump")) {
 			myRigidBody.AddForce(transform.up*penguinJumpForce);
 		}
-		myAnim.SetFloat("vVelocity", myRigidBody.velocity.y);
+		myAnim.SetFloat("vVelocity", Mathf.Abs(myRigidBody.velocity.y));
 	}
 }
