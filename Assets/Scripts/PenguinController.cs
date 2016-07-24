@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class PenguinController : MonoBehaviour {
@@ -23,7 +24,7 @@ public class PenguinController : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D collision) {
 		if (collision.collider.gameObject.layer == LayerMask.NameToLayer("darkness")) {
-			SceneManager.LoadScene(SceneManager.GetActiveScene());
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}
 	}
 }
