@@ -22,13 +22,7 @@ public class PenguinController : MonoBehaviour {
 		myAnim.SetFloat("vVelocity", Mathf.Abs(myRigidBody.velocity.y));
 	}
 
-	void OnCollisionEnter2D(Collision2D collision) {
-		if (collision.collider.gameObject.layer == LayerMask.NameToLayer("darkness")) {
-			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-		}
-	}
-
 	void OnDestroy() {
-		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		SceneManager.LoadScene("dead");
 	}
 }
